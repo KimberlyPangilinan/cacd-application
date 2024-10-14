@@ -72,6 +72,9 @@ h1 {
   line-height: 1.1;
   font-family: Merriweather;
 }
+h2,h3 {
+  font-family: Merriweather;
+}
 
 /* button {
   border-radius: 8px;
@@ -93,3 +96,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+section {
+  padding: 6rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+}

@@ -16,7 +16,7 @@ export const Header = () => {
             </ul>
         </nav>
         <div>
-            <button className="border-2 border-red-700 rounded-full px-6 py-2 text-sm text-red-700 font-bold">Get Involved</button>
+            <button className="border-2 border-cacdRed rounded-full px-6 py-2 text-sm text-cacdRed font-bold">Get Involved</button>
         </div>
     </header>
   )
