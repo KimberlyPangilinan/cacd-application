@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import LOGO from "../../assets/images/cacd_logo.jpg"
 import { PrimaryOutline } from "./Buttons"
 export const Header = () => {
@@ -9,8 +10,8 @@ export const Header = () => {
         </div>
         <nav>
             <ul className="flex">
-                <li className="px-8 text-sm font-semibold">Home</li>
-                <li className="px-8 text-sm font-semibold">Events</li>
+            <Link to="/" className="text-black hover:text-red-700"><li className="px-8 text-sm font-semibold">Home</li></Link>
+            <Link to="/events" className="text-black hover:text-red-700"><li className="px-8 text-sm font-semibold">Events</li></Link>
                 <li className="px-8 text-sm font-semibold">About</li>
                 <li className="px-8 text-sm font-semibold">Gallery</li>
                 <li className="px-8 text-sm font-semibold">Contact Us</li>
