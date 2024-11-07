@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import LOGO from "../../assets/images/cacd_logo.jpg"
+import LOGO from "/images/cacd_logo.jpg"
 import { PrimaryOutline } from "./Buttons"
 export const Header = () => {
   return (

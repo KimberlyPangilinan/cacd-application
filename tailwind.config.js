@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-image': "url('../src/assets/images/cacd_hero.png')",
-        'about-image': "url('../src/assets/images/cacd_bg.png')",
-        'divider-image': "url('../src/assets/images/cacd-divider.png')",
+        'hero-image': "url('/images/cacd_hero.png')",
+        'about-image': "url('/images/cacd_bg.png')",
+        'divider-image': "url('/images/cacd-divider.png')",
       }, 
       colors: {
         cacdRed: {

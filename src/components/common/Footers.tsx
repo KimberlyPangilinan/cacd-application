@@ -1,5 +1,5 @@
 import { PrimaryButton } from "./Buttons";
-import LOGO from "../../assets/images/cacd_logo.jpg"
+import LOGO from "/images/cacd_logo.jpg"
 export const Footer = () => {
   return (
     <footer className="font-sans h-[60vh] text-white bg-[#131313] w-[100vw] py-6 px-[6rem] flex flex-col">
