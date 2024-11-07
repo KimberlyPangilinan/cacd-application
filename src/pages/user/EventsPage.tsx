@@ -1,4 +1,3 @@
-import React from 'react'
 import { DivMotion } from '../../components/common/DivMotion'
 import EventTimer from '../../components/events/EventTimer'
 import { PrimaryButton } from '../../components/common/Buttons'
