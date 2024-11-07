@@ -1,6 +1,6 @@
 import moment from "moment";
 import { Icon } from '@iconify/react';
-export interface Event {
+export type  Event = {
   name: string;
   description: string;
   img: string;
@@ -18,7 +18,7 @@ const EventCalendar = ({ date }: { date: number }) => {
   );
 };
 
-const EventDetails = ({ event }: { event: Event }) => {
+const EventDetails = ({ event }: { event: Event } ) => {
   return (
   <div className="p-6 flex flex-col justify-between">
     <div  className="space-y-4">
@@ -53,7 +53,7 @@ const EventDetails = ({ event }: { event: Event }) => {
   );
 };
 
-const EventCard = ({ event }: { event: Event }) => {
+const EventCard = ( { event }: { event: Event } ) => {
   return (
     <div className="flex w-full justify-between">
       <div>

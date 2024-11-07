@@ -9,6 +9,7 @@ export default {
       backgroundImage: {
         'hero-image': "url('../src/assets/images/cacd_hero.png')",
         'about-image': "url('../src/assets/images/cacd_bg.png')",
+        'divider-image': "url('../src/assets/images/cacd-divider.png')",
       }, 
       colors: {
         cacdRed: {

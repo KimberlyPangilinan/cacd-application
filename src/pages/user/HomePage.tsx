@@ -1,37 +1,88 @@
 import EventCard, { Event } from "../../components/events/EventCard";
 import EventTimer from "../../components/events/EventTimer";
 import { DivMotion } from "../../components/common/DivMotion";
+import { Card } from "../../components/common/Card";
+import { useState } from "react";
+import { PrimaryButton, SecondaryButton, SecondaryButtonOutline } from "../../components/common/Buttons";
 
+const sampleEvents: Event[] = [
+  {
+    name: "Sample Event 1",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dapibus laoreet nulla, non sagittis ipsum egestas ut. Integer a arcu quis enim vestibulum viverra euismod quis tortor. Fusce luctus magna at mauris aliquam, ac cursus orci ultricies. Phasellus porta dolor et quam venenatis vehicula. Mauris dictum nulla a mi vestibulum, at accumsan ex lacinia. Integer ut bibendum erat. Pellentesque tincidunt a quam nec semper",
+    img: "https://via.placeholder.com/150",
+    date: 1730261613000,
+  },
+  {
+    name: "Sample Event 2",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dapibus laoreet nulla, non sagittis ipsum egestas ut. Integer a arcu quis enim vestibulum viverra euismod quis tortor. Fusce luctus magna at mauris aliquam, ac cursus orci ultricies. Phasellus porta dolor et quam venenatis vehicula. Mauris dictum nulla a mi vestibulum, at accumsan ex lacinia. Integer ut bibendum erat. Pellentesque tincidunt a quam nec semperThis is the description of the second event.",
+    img: "https://via.placeholder.com/150",
+    date: 1730261613000,
+  },
+  {
+    name: "Sample Event 3",
+    description: "This is the description of the third event.",
+    img: "https://via.placeholder.com/150",
+    date: 1730261613000,
+  },
+];
+const images1 = [
+  {
+    src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+    width: 320,
+    height: 174,
+    isSelected: true,
+    caption: "After Rain (Jeshu John - designerspics.com)",
+  },
+  {
+    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+    width: 320,
+    height: 212,
+    tags: [
+      { value: "Ocean", title: "Ocean" },
+      { value: "People", title: "People" },
+    ],
+    alt: "Boats (Jeshu John - designerspics.com)",
+  },
+  {
+    src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+    width: 320,
+    height: 212,
+  },
+  {
+    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+    width: 320,
+    height: 212,
+    tags: [
+      { value: "Ocean", title: "Ocean" },
+      { value: "People", title: "People" },
+    ],
+    alt: "Boats (Jeshu John - designerspics.com)",
+  },
+  {
+    src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+    width: 320,
+    height: 212,
+  },
+];
 export const HomePage = () => {
-  const sampleEvents: Event[] = [
-    {
-      name: "Sample Event 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dapibus laoreet nulla, non sagittis ipsum egestas ut. Integer a arcu quis enim vestibulum viverra euismod quis tortor. Fusce luctus magna at mauris aliquam, ac cursus orci ultricies. Phasellus porta dolor et quam venenatis vehicula. Mauris dictum nulla a mi vestibulum, at accumsan ex lacinia. Integer ut bibendum erat. Pellentesque tincidunt a quam nec semper",
-      img: "https://via.placeholder.com/150",
-      date: 1730261613000,
-    },
-    {
-      name: "Sample Event 2",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dapibus laoreet nulla, non sagittis ipsum egestas ut. Integer a arcu quis enim vestibulum viverra euismod quis tortor. Fusce luctus magna at mauris aliquam, ac cursus orci ultricies. Phasellus porta dolor et quam venenatis vehicula. Mauris dictum nulla a mi vestibulum, at accumsan ex lacinia. Integer ut bibendum erat. Pellentesque tincidunt a quam nec semperThis is the description of the second event.",
-      img: "https://via.placeholder.com/150",
-      date: 1730261613000,
-    },
-    {
-      name: "Sample Event 3",
-      description: "This is the description of the third event.",
-      img: "https://via.placeholder.com/150",
-      date: 1730261613000,
-    },
-  ];
+  const [images] = useState(images1);
+  const [selectedImage, setSelectedImage] = useState(-1);
+
+  const showNextPreviousImage = (direction: number) => {
+    setSelectedImage(
+      (prevIndex) => (prevIndex + direction + images.length) % images.length
+    );
+  };
+
   return (
     <>
       {/* ------------------------------ Hero Section ------------------------------ */}
       <section className="bg-hero-image bg-cover w-[100vw] h-[100vh]">
         <div>
           <div className="flex flex-col gap-2 w-[45vw] text-white text-center">
-            <h2 className="text-4xl">Life Changing Journey to God</h2>
+            <h1 className="text-4xl">Life Changing Journey to God</h1>
             <p>
               To bring all peoples to the kingdom of the living God regardless
               of race, status, belief and religious affiliations through the
@@ -65,12 +116,8 @@ export const HomePage = () => {
         <div className="flex-1 flex justify-around">
           <EventTimer />
           <div className="flex flex-col items-center justify-center gap-4 px-8">
-            <button className="border border-white rounded-full px-8 py-2 text-sm text-white font-bold">
-              Join us now
-            </button>
-            <button className="border-2 border-white rounded-full bg-white px-8 py-2 text-sm text-cacdRed font-bold">
-              Join us now
-            </button>
+            <SecondaryButtonOutline title="Register Now"/>
+            <SecondaryButton title="View Event"/>
           </div>
         </div>
       </section>
@@ -86,9 +133,11 @@ export const HomePage = () => {
               Upcoming Events
             </span>
           </h2>
-          <button className="bg-cacdRed rounded-full px-8 py-2 text-sm text-white font-bold">
-            Join us now
-          </button>
+          <PrimaryButton title="View All Events" action ={async () => {
+    // Simulate a network request or long-running process
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    alert('Changes saved!');
+  }}/>
         </div>
 
         <div className="flex-1 w-full space-y-4">
@@ -105,7 +154,7 @@ export const HomePage = () => {
       {/* ------------------------------ About Section ----------------------------- */}
       <section className="flex bg-cacdRed p-0">
         <div className="w-[60vw] justify-center items-center text-white flex flex-col p-8 gap-4">
-          <h2 className="text-3xl font-sans ">About the Church</h2>
+          <h2 className="text-xl font-sans ">About the Church</h2>
           <p className="w-[80%]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu
             nulla sed nisl gravida efficitur id ut turpis. Praesent lorem ante,
@@ -114,12 +163,123 @@ export const HomePage = () => {
             turpis egestas. Cras ultrices maximus libero at facilisis.
             Pellentesque ut suscipit nisi.
           </p>
-          <button className="border border-white rounded-full px-8 py-2 text-sm text-white font-bold">
-            Read More About Us
-          </button>
+          <SecondaryButtonOutline title="Read More About Us"/>
         </div>
 
         <div className="min-h-[64vh] w-[40vw] space-y-4 bg-about-image"></div>
+      </section>
+
+      {/* ------------------------------ Mission, Vision & Core values Section ----------------------------- */}
+      <section className="flex flex-col min-h-[100vh]">
+        <div className="w-full justify-between flex mb-10">
+          <h2 className="flex flex-col">
+            <span className="text-cacdRed font-bold text-xs">
+              CACD Church of Christ
+            </span>
+            <span className="uppercase font-bold text-3xl">
+              Mission, Vision, & Core Values
+            </span>
+          </h2>
+        </div>
+
+        <div className="flex-1 flex justify-between gap-4 w-full space-y-4">
+          <Card
+            title="Mission"
+            description="To bring all peoples to the kingdom of the living God regardless of  race, status, belief and religious affiliations through the saving,  healing, delivering, and transforming power of the Lord Jesus Christ."
+            icon="prime:globe"
+          />
+          <Card
+            title="Vision"
+            description="A glorious church evangelizing and discipling Filipinos and all the  peoples of the world through teaching, preaching and living-out the  full-Gospel of the Lord Jesus Christ."
+            icon="prime:heart"
+          />
+          <Card
+            title="Core Values"
+            description="Passionate Love for God
+            Love and Compassion for Others 
+            Integrity 
+            Faithfulness"
+            icon="ph:users"
+          />
+        </div>
+      </section>
+      <section className="flex justify-center items-center min-h-[60vh] bg-divider-image bg-black bg-cover text-white">
+        <div className="text-center flex flex-col gap-2 justify-center items-center">
+          <h1 className="text-4xl font-bold">
+            Let's make the world, a better place
+          </h1>
+          <p className="w-[80%]">
+            To bring all peoples to the kingdom of the living God regardless of
+            race, status, belief and religious affiliations through the saving.
+          </p>
+        </div>
+      </section>
+      <section className="flex flex-col min-h-[100vh]">
+        <div className="w-full justify-between flex mb-10">
+          <h2 className="flex flex-col">
+            <span className="text-cacdRed font-bold text-xs">
+              CACD Church of Christ
+            </span>
+            <span className="uppercase font-bold text-3xl">Gallery</span>
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {images.map((image, index) => (
+            <img
+              onClick={() => setSelectedImage(index)}
+              key={index}
+              src={image.src}
+              className="w-full h-full rounded-lg object-cover shadow-md"
+              alt={`Image ${index + 1}`}
+            />
+          ))}
+        </div>
+        {selectedImage != -1 && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <button
+              onClick={() => setSelectedImage(-1)}
+              className="absolute top-2 right-2 text-4xl text-gray-600 hover:text-gray-800"
+            >
+              &times;
+            </button>
+            <button
+              onClick={() => showNextPreviousImage(-1)}
+              className="absolute top-1/2 left-2 text-4xl text-gray-600 hover:text-gray-800"
+            >
+              &lt;
+            </button>
+            <button
+              onClick={() => showNextPreviousImage(1)}
+              className="absolute top-1/2 right-2 text-4xl text-gray-600 hover:text-gray-800"
+            >
+              &gt;
+            </button>
+            <div className="relative shadow-lg  w-[80%]">
+              <img
+                src={images[selectedImage].src}
+                alt="Selected"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        )}
+      </section>
+      <section className="p-0">
+        <div className="min-h-[55vh] w-[100vw] flex justify-end pr-[10%] space-y-4 bg-about-image">
+          <div className="bg-cacdRed w-[50vw] justify-center items-center text-white flex flex-col p-8 gap-4">
+            <h2 className="text-xl font-sans ">Support the Ministry</h2>
+            <p className="w-[80%]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu
+              nulla sed nisl gravida efficitur id ut turpis. Praesent lorem ante,
+              eleifend id sollicitudin ac, dapibus sit amet eros. Pellentesque
+              habitant morbi tristique senectus et netus et malesuada fames ac
+              turpis egestas. Cras ultrices maximus libero at facilisis.
+              Pellentesque ut suscipit nisi.
+            </p>
+            <SecondaryButtonOutline title="Let's Donate"/>
+          </div>
+        </div>
       </section>
     </>
   );

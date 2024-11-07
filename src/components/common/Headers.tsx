@@ -1,4 +1,5 @@
 import LOGO from "../../assets/images/cacd_logo.jpg"
+import { PrimaryOutline } from "./Buttons"
 export const Header = () => {
   return (
     <header className="w-[100vw] py-6 px-5 flex justify-between items-center">
@@ -16,7 +17,7 @@ export const Header = () => {
             </ul>
         </nav>
         <div>
-            <button className="border-2 border-cacdRed rounded-full px-6 py-2 text-sm text-cacdRed font-bold">Get Involved</button>
+          <PrimaryOutline title="Get Involved"/>
         </div>
     </header>
   )
