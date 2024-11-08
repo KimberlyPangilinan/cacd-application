@@ -115,8 +115,8 @@ const GalleryPage = () => {
     <Header />
     <main className="grow max-h-screen  overflow-hidden">
     
-    <section className=" flex justify-start flex-col gap-8 py-2">
-      <div className="w-full justify-between flex">
+    <section className=" flex justify-start flex-col  py-2">
+      <div className="h-[10vh] w-full justify-between flex">
         <h2 className="flex flex-col">
           <span className="text-cacdRed font-bold !text-[0.75rem] mb-2">
             CACD Church of Christ
@@ -124,7 +124,7 @@ const GalleryPage = () => {
           <span className="uppercase font-bold text-3xl">Gallery</span>
         </h2>
       </div>
-      <div className="flex items-center w-full justify-between">
+      <div className="h-[8vh] flex items-center w-full justify-between">
         <div>
         <button className="px-4 py-2 border-cacdRed border-b text-cacdRed text-sm">All Photos</button>
         <button className="px-4 py-2 border-neutral-500 border-b text-neutral-500 text-sm">All Albums</button>
@@ -139,7 +139,7 @@ const GalleryPage = () => {
         </div>
       </div>
       <div>
-      <div className="max-h-[64vh] overflow-scroll grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="max-h-[70vh] overflow-scroll grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {images.map((image, index) => (
             <img
               onClick={() => setSelectedImage(index)}
