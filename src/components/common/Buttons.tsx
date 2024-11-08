@@ -44,11 +44,11 @@ const BaseButton = ({
 
 // Specific button components using BaseButton
 export const PrimaryStateButton = (props: ButtonProps) => (
-  <BaseButton {...props} className="w-[180px] bg-cacdRed rounded-full px-8 py-2 text-sm text-white font-bold" />
+  <BaseButton {...props} className="w-[180px]  bg-cacdRed rounded-full px-8 py-2 text-sm text-white font-bold" />
 );
 
 export const PrimaryButton = (props: ButtonProps) => (
-  <BaseButton {...props} className="w-[180px] bg-cacdRed rounded-full px-8 py-2 text-sm text-white font-bold" />
+  <BaseButton {...props} className="w-[180px]  bg-cacdRed rounded-full px-8 py-2 text-sm text-white font-bold" />
 );
 
 export const SecondaryButtonOutline = (props: ButtonProps) => (
@@ -60,6 +60,6 @@ export const SecondaryButton = ({ title = "Join us now" }: Partial<ButtonProps>)
 );
 
 export const PrimaryOutline = ({ title = "Join us now" }: Partial<ButtonProps>) => (
-    <BaseButton title={title}  className="border-2 border-cacdRed rounded-full px-8 py-2 text-sm text-cacdRed font-bold" />
+    <BaseButton title={title}  className="border-2   border-cacdRed rounded-full px-8 py-2 text-sm text-cacdRed font-bold" />
   );
   

@@ -30,19 +30,19 @@ const EventTimer = () => {
     <div className="flex-1 flex justify-center">
     <div className="text-white flex text-center">
       <div className="flex flex-col">
-        <span className="text-4xl p-4 w-20">{timeLeft.days}</span>
+        <span className="!text-4xl p-4 w-20">{timeLeft.days}</span>
         <span>Days</span>
       </div>
       <div className="flex flex-col">
-        <span className="text-4xl p-4 w-20">{timeLeft.hours}</span>
+        <span className="!text-4xl p-4 w-20">{timeLeft.hours}</span>
         <span>Hours</span>
       </div>
       <div className="flex flex-col">
-        <span className="text-4xl p-4 w-20">{timeLeft.minutes}</span>
+        <span className="!text-4xl p-4 w-20">{timeLeft.minutes}</span>
         <span>Minutes</span>
       </div>
       <div className="flex flex-col">
-        <span className="text-4xl p-4 w-20">{timeLeft.seconds}</span>
+        <span className="!text-4xl p-4 w-20">{timeLeft.seconds}</span>
         <span>Seconds</span>
       </div>
     </div>

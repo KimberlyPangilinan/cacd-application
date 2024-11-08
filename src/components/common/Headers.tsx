@@ -3,7 +3,7 @@ import LOGO from "/images/cacd_logo.jpg"
 import { PrimaryOutline } from "./Buttons"
 export const Header = () => {
   return (
-    <header className="w-[100vw] py-6 px-5 flex justify-between items-center">
+    <header className="w-[100vw] py-6 px-5 flex justify-between items-center min-h-[10vh]">
         <div id="company-logo" className="flex items-center gap-4">
             <img className="w-10 h-10 object-cover" src={LOGO} alt="CACD logo"/>
             <span className="font-bold">CACD Church of Christ</span>

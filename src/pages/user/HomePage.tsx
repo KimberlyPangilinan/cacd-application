@@ -82,7 +82,7 @@ export const HomePage = () => {
       <section className="bg-hero-image bg-cover w-[100vw] h-[100vh]">
         <div>
           <div className="flex flex-col gap-2 w-[45vw] text-white text-center">
-            <h1 className="text-4xl">Life Changing Journey to God</h1>
+            <h1 className=" text-[3vw]">Life Changing Journey to God</h1>
             <p>
               To bring all peoples to the kingdom of the living God regardless
               of race, status, belief and religious affiliations through the
@@ -103,7 +103,7 @@ export const HomePage = () => {
       <section className="min-h-[48vh] bg-cacdRed flex justify-between">
         <div className="w-[30vw] text-white">
           <DivMotion>
-            <h3 className="text-2xl text-white">
+            <h3 className="text-2xl mb-3 text-white">
               Let’s make the world a better place
             </h3>
           </DivMotion>
@@ -126,7 +126,7 @@ export const HomePage = () => {
       <section className="flex flex-col min-h-[100vh]">
         <div className="w-full justify-between flex mb-10">
           <h2 className="flex flex-col">
-            <span className="text-cacdRed font-bold text-xs">
+            <span className="text-cacdRed font-bold text-xs mb-2">
               CACD Church of Christ
             </span>
             <span className="uppercase font-bold text-3xl">
@@ -154,7 +154,7 @@ export const HomePage = () => {
       {/* ------------------------------ About Section ----------------------------- */}
       <section className="flex bg-cacdRed p-0">
         <div className="w-[60vw] justify-center items-center text-white flex flex-col p-8 gap-4">
-          <h2 className="text-xl font-sans ">About the Church</h2>
+          <h2 className="text-3xl font-sans ">About the Church</h2>
           <p className="w-[80%]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu
             nulla sed nisl gravida efficitur id ut turpis. Praesent lorem ante,
@@ -173,7 +173,7 @@ export const HomePage = () => {
       <section className="flex flex-col min-h-[100vh]">
         <div className="w-full justify-between flex mb-10">
           <h2 className="flex flex-col">
-            <span className="text-cacdRed font-bold text-xs">
+            <span className="text-cacdRed font-bold text-xs mb-2">
               CACD Church of Christ
             </span>
             <span className="uppercase font-bold text-3xl">
@@ -204,7 +204,7 @@ export const HomePage = () => {
         </div>
       </section>
       <section className="flex justify-center items-center min-h-[60vh] bg-divider-image bg-black bg-cover text-white">
-        <div className="text-center flex flex-col gap-2 justify-center items-center">
+        <div className="text-center flex flex-col gap-4 justify-center items-center">
           <h1 className="text-4xl font-bold">
             Let's make the world, a better place
           </h1>
@@ -217,7 +217,7 @@ export const HomePage = () => {
       <section className="flex flex-col min-h-[100vh]">
         <div className="w-full justify-between flex mb-10">
           <h2 className="flex flex-col">
-            <span className="text-cacdRed font-bold text-xs">
+            <span className="text-cacdRed font-bold text-xs mb-2">
               CACD Church of Christ
             </span>
             <span className="uppercase font-bold text-3xl">Gallery</span>
