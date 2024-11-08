@@ -69,20 +69,23 @@ body {
 
 h1 {
   font-size: 3vw !important;
-  line-height: 1.1;
+  line-height: 3vw;
   font-family: Merriweather;
 }
 h2,h3 {
   font-family: Merriweather;
   font-size: 2vw !important;
+  line-height: 2.2vw !important;
 }
 
 h2 span:nth-last-child(1){
   font-size: 2vw !important;
+  line-height: 2.2vw;
 }
 
 p, span, li, button {
   font-size: 1vw !important;
+  line-height: 1.5vw !important;
 }
 /* button {
   border-radius: 8px;

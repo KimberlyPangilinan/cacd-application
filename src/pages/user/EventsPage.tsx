@@ -89,8 +89,8 @@ const EventsPage = () => {
         <div className="flex-1 w-full space-y-4">
           {sampleEventsByMonth.slice(0, 5).map((events) => {
             return (
-              <DivMotion>
-              <h2 className='text-neutral-600 uppercase text-sm font-bold mb-6'>{events.month}</h2>
+              <DivMotion >
+              <span className='text-neutral-600 uppercase text-sm font-bold mt-8'>{events.month}</span>
               {events.events.map((eventItem)=>{
               return (
                 <EventCard event={eventItem} />
