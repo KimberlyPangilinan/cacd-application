@@ -3,7 +3,11 @@ import EventTimer from "../../components/events/EventTimer";
 import { DivMotion } from "../../components/common/DivMotion";
 import { Card } from "../../components/common/Card";
 import { useState } from "react";
-import { PrimaryButton, SecondaryButton, SecondaryButtonOutline } from "../../components/common/Buttons";
+import {
+  PrimaryButton,
+  SecondaryButton,
+  SecondaryButtonOutline,
+} from "../../components/common/Buttons";
 import { Gallery } from "../../components/gallery/Gallery";
 
 const sampleEvents: Event[] = [
@@ -110,8 +114,8 @@ export const HomePage = () => {
         <div className="flex-1 flex justify-around">
           <EventTimer />
           <div className="flex flex-col items-center justify-center gap-4 px-8">
-            <SecondaryButtonOutline title="Register Now"/>
-            <SecondaryButton title="View Event"/>
+            <SecondaryButtonOutline title="Register Now" />
+            <SecondaryButton title="View Event" />
           </div>
         </div>
       </section>
@@ -127,11 +131,14 @@ export const HomePage = () => {
               Upcoming Events
             </span>
           </h2>
-          <PrimaryButton title="View All Events" action ={async () => {
-    // Simulate a network request or long-running process
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    alert('Changes saved!');
-  }}/>
+          <PrimaryButton
+            title="View All Events"
+            action={async () => {
+              // Simulate a network request or long-running process
+              await new Promise((resolve) => setTimeout(resolve, 1500));
+              alert("Changes saved!");
+            }}
+          />
         </div>
 
         <div className="flex-1 w-full space-y-4">
@@ -157,7 +164,7 @@ export const HomePage = () => {
             turpis egestas. Cras ultrices maximus libero at facilisis.
             Pellentesque ut suscipit nisi.
           </p>
-          <SecondaryButtonOutline title="Read More About Us"/>
+          <SecondaryButtonOutline title="Read More About Us" />
         </div>
 
         <div className="min-h-[64vh] w-[40vw] space-y-4 bg-about-image"></div>
@@ -218,21 +225,21 @@ export const HomePage = () => {
           </h2>
         </div>
 
-        <Gallery images={images}/>
+        <Gallery images={images} />
       </section>
       <section className="p-0">
         <div className="min-h-[55vh] w-[100vw] flex justify-end pr-[10%] space-y-4 bg-about-image">
           <div className="bg-cacdRed w-[50vw] justify-center items-center text-white flex flex-col p-8 gap-4">
             <h2 className="text-xl font-sans ">Support the Ministry</h2>
             <p className="w-[80%]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu
-              nulla sed nisl gravida efficitur id ut turpis. Praesent lorem ante,
-              eleifend id sollicitudin ac, dapibus sit amet eros. Pellentesque
-              habitant morbi tristique senectus et netus et malesuada fames ac
-              turpis egestas. Cras ultrices maximus libero at facilisis.
-              Pellentesque ut suscipit nisi.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              eu nulla sed nisl gravida efficitur id ut turpis. Praesent lorem
+              ante, eleifend id sollicitudin ac, dapibus sit amet eros.
+              Pellentesque habitant morbi tristique senectus et netus et
+              malesuada fames ac turpis egestas. Cras ultrices maximus libero at
+              facilisis. Pellentesque ut suscipit nisi.
             </p>
-            <SecondaryButtonOutline title="Let's Donate"/>
+            <SecondaryButtonOutline title="Let's Donate" />
           </div>
         </div>
       </section>

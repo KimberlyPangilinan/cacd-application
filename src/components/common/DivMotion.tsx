@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 
-
 interface DivMotionProps {
-  children: React.ReactNode; 
+  children: React.ReactNode;
 }
 
 export const DivMotion = ({ children }: DivMotionProps) => {

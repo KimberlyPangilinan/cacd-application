@@ -13,12 +13,7 @@ type ButtonProps = {
 };
 
 // Base Button component for common behavior
-const BaseButton = ({
-  title,
-  action,
-  to,
-  className,
-}: ButtonProps) => {
+const BaseButton = ({ title, action, to, className }: ButtonProps) => {
   const [loading, setLoading] = useState(false);
 
   const handleClick = async () => {
@@ -32,7 +27,9 @@ const BaseButton = ({
   const buttonElement = (
     <button
       onClick={handleClick}
-      className={`${className} ${loading ? "opacity-50 cursor-not-allowed animate-pulse" : ""}`}
+      className={`${className} ${
+        loading ? "opacity-50 cursor-not-allowed animate-pulse" : ""
+      }`}
       disabled={loading}
     >
       {loading ? "Loading..." : title}
@@ -64,15 +61,20 @@ export const SecondaryButtonOutline = (props: ButtonProps) => (
   />
 );
 
-export const SecondaryButton = ({ title = "Join us now" }: Partial<ButtonProps>) => (
+export const SecondaryButton = ({
+  title = "Join us now",
+}: Partial<ButtonProps>) => (
   <BaseButton
     title={title}
     className="w-[220px] border-2 border-white rounded-full bg-white px-4 py-2 text-sm text-cacdRed font-bold transition duration-300 ease-in-out hover:bg-red-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-cacdRed"
   />
 );
 
-
-export const PrimaryOutline = ({ title = "Join us now" }: Partial<ButtonProps>) => (
-    <BaseButton title={title}  className="border-2 border-cacdRed rounded-full px-8 py-2 text-sm text-cacdRed font-bold transition duration-300 ease-in-out hover:bg-red-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-bg-red-600" />
-  );
-  
+export const PrimaryOutline = ({
+  title = "Join us now",
+}: Partial<ButtonProps>) => (
+  <BaseButton
+    title={title}
+    className="border-2 border-cacdRed rounded-full px-8 py-2 text-sm text-cacdRed font-bold transition duration-300 ease-in-out hover:bg-red-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-bg-red-600"
+  />
+);

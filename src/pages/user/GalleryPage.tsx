@@ -171,22 +171,19 @@ const GalleryPage = () => {
         </div>
       </div>
       <div>
-        {selectedView == gallery.PHOTOS && (
-          <Gallery images={images}/>
-        )}
+        {selectedView == gallery.PHOTOS && <Gallery images={images} />}
         {selectedView == gallery.ALBUMS && (
           <div className="max-h-[66vh] overflow-scroll grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {albums.map((image, index) => (
+            {albums.map((image, index) => (
               <img
                 key={index}
                 src={image.src}
                 className="w-full h-full rounded-lg object-cover shadow-md"
                 alt={`Image ${index + 1}`}
-              />))}
+              />
+            ))}
           </div>
         )}
-        
-     
       </div>
     </section>
   );

@@ -2,39 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face { font-family: Merriweather; 
-  src: url('../fonts/Merriweather-Regular.ttf'); } 
-  
-  @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-Regular.ttf') format('truetype');
-    font-weight: 400; /* Regular */
-    font-style: normal;
-  }
-  
+@font-face {
+  font-family: Merriweather;
+  src: url('../fonts/Merriweather-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Regular.ttf') format('truetype');
+  font-weight: 400;
+  /* Regular */
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Bold.ttf') format('truetype');
+  font-weight: 700;
   /* Bold */
-  @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-Bold.ttf') format('truetype');
-    font-weight: 700; /* Bold */
-    font-style: normal;
-  }
-  
+  font-style: normal;
+}
+
+/* Thin */
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Thin.ttf') format('truetype');
+  font-weight: 100;
   /* Thin */
-  @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-Thin.ttf') format('truetype');
-    font-weight: 100; /* Thin */
-    font-style: normal;
-  }
-  
-  /* Italic (optional) */
-  @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-Italic.ttf') format('truetype');
-    font-weight: 400; /* Regular */
-    font-style: italic;
-  }
+  font-style: normal;
+}
+
+/* Italic (optional) */
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Italic.ttf') format('truetype');
+  font-weight: 400;
+  /* Regular */
+  font-style: italic;
+}
+
 :root {
   --cacd-white: #f9f9f9;
   --cacd-red: #B3261E;
@@ -50,11 +57,13 @@
 * {
   font-family: Raleway;
 }
+
 a {
   font-weight: 500;
   color: var(--cacd-red);
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -72,21 +81,27 @@ h1 {
   line-height: 3vw;
   font-family: Merriweather;
 }
-h2,h3 {
+
+h2,
+h3 {
   font-family: Merriweather;
   font-size: 2vw !important;
   line-height: 2.2vw !important;
 }
 
-h2 span:nth-last-child(1){
+h2 span:nth-last-child(1) {
   font-size: 2vw !important;
   line-height: 2.2vw;
 }
 
-p, span, li, button {
+p,
+span,
+li,
+button {
   font-size: 1vw !important;
   line-height: 1.5vw !important;
 }
+
 /* button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -102,6 +117,7 @@ p, span, li, button {
 button:hover {
   border-color: var(--cacd-red);
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -109,7 +125,7 @@ button:focus-visible {
 
 section {
   padding: 6rem;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 

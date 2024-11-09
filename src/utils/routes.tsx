@@ -6,11 +6,10 @@ import EventsPage from "../pages/user/EventsPage";
 import GalleryPage from "../pages/user/GalleryPage";
 import { AboutPage } from "../pages/user/AboutPage";
 
-
 export const router = createBrowserRouter([
-  { 
+  {
     path: "/",
-    element:  <UserRoutes/>,
+    element: <UserRoutes />,
     children: [
       {
         path: "",
@@ -26,16 +25,18 @@ export const router = createBrowserRouter([
       },
     ],
   },
-  { 
+  {
     path: "/gallery",
-    element:  <UserRoutesWithoutFooter/>,
+    element: <UserRoutesWithoutFooter />,
     children: [
-      { 
+      {
         path: "",
         element: <GalleryPage />,
-      }]},
-  { 
+      },
+    ],
+  },
+  {
     path: "/login",
-    element:  <Login/>,
+    element: <Login />,
   },
 ]);

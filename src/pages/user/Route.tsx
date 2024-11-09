@@ -10,7 +10,7 @@ export const UserRoutes = () => {
       <main className="grow">
         <Outlet />
       </main>
-      <Footer/>
+      <Footer />
     </div>
   ) : (
     <Navigate to="/login" replace />
@@ -30,4 +30,3 @@ export const UserRoutesWithoutFooter = () => {
     <Navigate to="/login" replace />
   );
 };
-
