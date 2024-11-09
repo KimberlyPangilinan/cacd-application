@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { UserRoutes } from "../pages/user/Route";
+import { UserRoutes, UserRoutesWithoutFooter } from "../pages/user/Route";
 import { HomePage } from "../pages/user/HomePage";
 import { Login } from "../pages/Login";
 import EventsPage from "../pages/user/EventsPage";
@@ -28,8 +28,12 @@ export const router = createBrowserRouter([
   },
   { 
     path: "/gallery",
-    element: <GalleryPage />,
-  },
+    element:  <UserRoutesWithoutFooter/>,
+    children: [
+      { 
+        path: "",
+        element: <GalleryPage />,
+      }]},
   { 
     path: "/login",
     element:  <Login/>,
