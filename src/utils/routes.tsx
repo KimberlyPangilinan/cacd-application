@@ -5,6 +5,7 @@ import { Login } from "../pages/Login";
 import EventsPage from "../pages/user/EventsPage";
 import GalleryPage from "../pages/user/GalleryPage";
 import { AboutPage } from "../pages/user/AboutPage";
+import { ContactPage } from "../pages/user/ContactPage";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: "about",
         element: <AboutPage />,
+      },
+      {
+        path: "contact",
+        element: <ContactPage />,
       },
     ],
   },

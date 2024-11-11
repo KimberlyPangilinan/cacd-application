@@ -22,7 +22,7 @@ export const Header = () => {
           <Link to="/gallery" className="text-black hover:text-red-700">
             <li className="px-8 text-sm font-semibold">Gallery</li>
           </Link>
-          <Link to="/events" className="text-black hover:text-red-700">
+          <Link to="/contact" className="text-black hover:text-red-700">
             <li className="px-8 text-sm font-semibold">Contact Us</li>
           </Link>
         </ul>

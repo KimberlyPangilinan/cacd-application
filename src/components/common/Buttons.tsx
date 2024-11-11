@@ -10,6 +10,7 @@ type ButtonProps = {
   loading?: boolean;
   to?: string;
   className?: string;
+  
 };
 
 // Base Button component for common behavior
@@ -43,7 +44,7 @@ const BaseButton = ({ title, action, to, className }: ButtonProps) => {
 export const PrimaryStateButton = (props: ButtonProps) => (
   <BaseButton
     {...props}
-    className="w-[180px] bg-cacdRed rounded-full px-8 py-2 text-sm text-white font-bold transition duration-300 ease-in-out hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-cacdRed"
+    className="min-w-[180px] bg-cacdRed rounded-full px-8 py-2 text-sm text-white font-bold transition duration-300 ease-in-out hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-cacdRed"
   />
 );
 
