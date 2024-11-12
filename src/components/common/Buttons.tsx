@@ -63,11 +63,12 @@ export const SecondaryButtonOutline = (props: ButtonProps) => (
 );
 
 export const SecondaryButton = ({
-  title = "Join us now",
+  title = "Join us now", to, className
 }: Partial<ButtonProps>) => (
   <BaseButton
     title={title}
-    className="w-[220px] border-2 border-white rounded-full bg-white px-4 py-2 text-sm text-cacdRed font-bold transition duration-300 ease-in-out hover:bg-red-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-cacdRed"
+    to={to}
+    className={className+" min-w-[220px] border-2 border-white rounded-full bg-white px-4 py-2 text-sm text-cacdRed font-bold transition duration-300 ease-in-out hover:bg-red-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-cacdRed"}
   />
 );
 

@@ -10,6 +10,7 @@ export default {
         'hero-image': "url('/images/cacd_hero.png')",
         'about-image': "url('/images/cacd_bg.png')",
         'divider-image': "url('/images/cacd-divider.png')",
+        'login-image': "url('/images/pexels-randy-west-1054697193-29210031.png')",
       }, 
       colors: {
         cacdRed: {

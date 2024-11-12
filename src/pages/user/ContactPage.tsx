@@ -21,17 +21,17 @@ export const ContactPage = () => {
   return (
     <>
       <section className="flex flex-col min-h-[60vh] py-8">
-        <div className="w-full justify-between flex mb-10">
-          <h2 className="flex flex-col">
+        <div className="w-full justify-center flex mb-10">
+          <h2 className="flex flex-col text-center">
             <span className="text-cacdRed font-bold text-xs mb-2">
               CACD Church of Christ
             </span>
             <span className="uppercase font-bold text-3xl">
-             Contact Us
+             Get in Touch
             </span>
           </h2>
         </div>
-        <div className="flex-1 flex grow border rounded-md w-full p-4 gap-8">
+        <div className="flex-1 flex grow rounded-md w-full p-4 gap-8">
           <div className="grow max-w-[50%] space-y-4">
             <img className="w-[100%] mb-4 h-[50vh] object-cover" src="https://via.placeholder.com/150"/>
             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean justo lacus, eleifend quis faucibus in, consectetur a libero.</span>

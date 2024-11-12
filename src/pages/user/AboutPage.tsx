@@ -120,7 +120,7 @@ export const AboutPage = () => {
   
   return (
     <>
-      <section className="!min-h-[40vh] py-6 bg-cacdRed flex justify-between">
+      <section className="!min-h-[60vh] py-6 bg-cacdRed bg-login-image bg-cover flex justify-between">
         <div className="w-[50vw] text-white">
           <DivMotion>
             <h3 className="mb-3 text-white">
@@ -128,21 +128,14 @@ export const AboutPage = () => {
             </h3>
           </DivMotion>
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          justo lacus, eleifend quis faucibus in, consectetur a libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
           justo lacus, eleifend quis faucibus in, consectetur a libero.</span>
+          
+          <p className="mt-8 text-white font-bold">Find Church of Christ near you</p>
         </div>
         
       </section>
-      <section className="flex flex-col min-h-[60vh] py-16">
-      <div className="w-full justify-between flex mb-10">
-          <h2 className="flex flex-col">
-            <span className="text-cacdRed font-bold text-xs mb-2">
-              CACD Church of Christ
-            </span>
-            <span className="uppercase font-bold text-3xl">
-              Mission, Vision, & Core Values
-            </span>
-          </h2>
-        </div>
+      <section className="flex flex-col min-h-[40vh] py-4">
         <div className="flex-1 flex justify-between gap-4 w-full space-y-4">
           <Card
             title="Mission"
