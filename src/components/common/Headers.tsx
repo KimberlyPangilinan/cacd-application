@@ -9,7 +9,7 @@ export const Header = () => {
   return (
     <>
       {isDrawerOpen && <Drawer handleClick={() => setIsDrawerOpen(false)} />}
-      <header className="w-[100vw] py-6 px-5 flex justify-between items-center min-h-[10vh]">
+      <header className="py-6 px-5 flex justify-between items-center min-h-[10vh]">
         <Link
           to="/"
           id="company-logo"

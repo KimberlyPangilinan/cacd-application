@@ -5,6 +5,7 @@ export type Event = {
   description: string;
   img: string;
   date: number;
+  status?: string;
 };
 
 const EventCalendar = ({ date }: { date: number }) => {
